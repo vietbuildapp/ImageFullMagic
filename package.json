@@ -4,20 +4,24 @@
     "private": true,
     "type": "module",
     "scripts": {
-        "dev": "npm run dev --workspace=apps/frontend",
-        "build": "npm run build --workspace=apps/frontend",
-        "preview": "npm run preview --workspace=apps/frontend",
-        "lint": "eslint .",
-        "test": "vitest"
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
     },
-    "workspaces": [
-        "shared/*",
-        "apps/*"
-    ],
+    "dependencies": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-router-dom": "^6.22.0",
+        "zustand": "^4.5.0",
+        "dexie": "^4.0.1",
+        "@google/generative-ai": "^0.21.0",
+        "lucide-react": "^0.469.0"
+    },
     "devDependencies": {
-        "@types/node": "^20.10.0",
-        "typescript": "^5.3.0",
-        "eslint": "^8.55.0",
-        "vitest": "^1.0.0"
+        "@types/react": "^18.3.0",
+        "@types/react-dom": "^18.3.0",
+        "@vitejs/plugin-react": "^4.2.1",
+        "typescript": "^5.3.3",
+        "vite": "^5.4.0"
     }
 }
